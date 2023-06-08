@@ -1,11 +1,22 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
-
+/*
+Vasco L. Adrian K.
+June 8, 2023
+ISU
+Creating a interactable vending machine in terminal.
+*/
 public class App {
     // Constants
     private static final int MAX_ITEMS = 9;
     private static final double CHIPS_PRICE = 2.50;
     private static final double CANDY_PRICE = 1.50;
+    private static final double PEACE_TEA = 3.00;
+    private static final double POKY = 2.47;
+    private static final double MILK = 2.00;
+    private static final double WATER = 2.75;
+    private static final double TIK_TAKS = 30.00;
+    private static final double CAKE = 1.00;
     private static final double GUM_PRICE = 1.00;
 
     // Variables
@@ -52,6 +63,48 @@ public class App {
                                 decimalFormat.format(amountTendered - GUM_PRICE) + ".");
                     }
                     break;
+                case 4:
+                    amountTendered = processItem(scanner, GUM_PRICE, gumInventory);
+                    if (amountTendered > 0) {
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                decimalFormat.format(amountTendered - PEACE_TEA) + ".");
+                    }
+                    break;
+                case 5:
+                    amountTendered = processItem(scanner, GUM_PRICE, gumInventory);
+                    if (amountTendered > 0) {
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                decimalFormat.format(amountTendered - POKY) + ".");
+                    }
+                    break;
+                case 6:
+                    amountTendered = processItem(scanner, GUM_PRICE, gumInventory);
+                    if (amountTendered > 0) {
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                decimalFormat.format(amountTendered - MILK) + ".");
+                    }
+                    break;
+                case 7:
+                    amountTendered = processItem(scanner, GUM_PRICE, gumInventory);
+                    if (amountTendered > 0) {
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                decimalFormat.format(amountTendered - WATER) + ".");
+                    }
+                    break;
+                case 8:
+                    amountTendered = processItem(scanner, GUM_PRICE, gumInventory);
+                    if (amountTendered > 0) {
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                decimalFormat.format(amountTendered - TIK_TAKS) + ".");
+                    }
+                    break;
+                case 9:
+                    amountTendered = processItem(scanner, GUM_PRICE, gumInventory);
+                    if (amountTendered > 0) {
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                decimalFormat.format(amountTendered - CAKE) + ".");
+                    }
+                    break;
                 default:
                     System.out.println("Invalid selection. Please try again.");
                     break;
@@ -92,39 +145,3 @@ public class App {
         return amountTendered;
     }
 }
-/*
-
-
-
-/*
-Vasco L. Adrian K.
-June 8, 2023
-ISU
-Creating a interactable vending machine in terminal.
-*
-
-
-import java.util.*;
-
-import javax.sound.sampled.SourceDataLine;
-public class App {
-    public static void main(String[] args) throws Exception {
-        Scanner customer = new Scanner(System.in);
-        Product peaceTea = new Product("Peace Tea", 3.00, 100);
-        
-        
-        
-    }
-}
-
- /* *
-  vending Mech got vvvvv
-- to String what its got
-- item item with name, amout and value/cost also tax
-- dispense item
-- stock itmes
-- display (gui to be extra)
-- 
-  
-  */
-  
