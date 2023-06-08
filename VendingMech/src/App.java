@@ -1,10 +1,8 @@
 import java.text.DecimalFormat;
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class App {
     private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
-    private static final Scanner scanner = new Scanner(System.in);
 
     private static final String ITEM_1_NAME = "Chips";
     private static final double ITEM_1_PRICE = 2.50;
@@ -158,20 +156,21 @@ public class App {
 
         showMessage(menuText);
     }
-
+    
     private static String getMenuItemsText() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(MENU_ITEM_1).append(". ").append(ITEM_1_NAME).append(" ($").append(ITEM_1_PRICE).append(") - ").append(ITEM_1_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_2).append(". ").append(ITEM_2_NAME).append(" ($").append(ITEM_2_PRICE).append(") - ").append(ITEM_2_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_3).append(". ").append(ITEM_3_NAME).append(" ($").append(ITEM_3_PRICE).append(") - ").append(ITEM_3_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_4).append(". ").append(ITEM_4_NAME).append(" ($").append(ITEM_4_PRICE).append(") - ").append(ITEM_4_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_5).append(". ").append(ITEM_5_NAME).append(" ($").append(ITEM_5_PRICE).append(") - ").append(ITEM_5_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_6).append(". ").append(ITEM_6_NAME).append(" ($").append(ITEM_6_PRICE).append(") - ").append(ITEM_6_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_7).append(". ").append(ITEM_7_NAME).append(" ($").append(ITEM_7_PRICE).append(") - ").append(ITEM_7_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_8).append(". ").append(ITEM_8_NAME).append(" ($").append(ITEM_8_PRICE).append(") - ").append(ITEM_8_INVENTORY).append("\n");
-        sb.append(MENU_ITEM_9).append(". ").append(ITEM_9_NAME).append(" ($").append(ITEM_9_PRICE).append(") - ").append(ITEM_9_INVENTORY).append("\n");
-        return sb.toString();
+        String menuText = "";
+        menuText += MENU_ITEM_1 + ". " + ITEM_1_NAME + " ($" + ITEM_1_PRICE + ") - " + ITEM_1_INVENTORY + "\n";
+        menuText += MENU_ITEM_2 + ". " + ITEM_2_NAME + " ($" + ITEM_2_PRICE + ") - " + ITEM_2_INVENTORY + "\n";
+        menuText += MENU_ITEM_3 + ". " + ITEM_3_NAME + " ($" + ITEM_3_PRICE + ") - " + ITEM_3_INVENTORY + "\n";
+        menuText += MENU_ITEM_4 + ". " + ITEM_4_NAME + " ($" + ITEM_4_PRICE + ") - " + ITEM_4_INVENTORY + "\n";
+        menuText += MENU_ITEM_5 + ". " + ITEM_5_NAME + " ($" + ITEM_5_PRICE + ") - " + ITEM_5_INVENTORY + "\n";
+        menuText += MENU_ITEM_6 + ". " + ITEM_6_NAME + " ($" + ITEM_6_PRICE + ") - " + ITEM_6_INVENTORY + "\n";
+        menuText += MENU_ITEM_7 + ". " + ITEM_7_NAME + " ($" + ITEM_7_PRICE + ") - " + ITEM_7_INVENTORY + "\n";
+        menuText += MENU_ITEM_8 + ". " + ITEM_8_NAME + " ($" + ITEM_8_PRICE + ") - " + ITEM_8_INVENTORY + "\n";
+        menuText += MENU_ITEM_9 + ". " + ITEM_9_NAME + " ($" + ITEM_9_PRICE + ") - " + ITEM_9_INVENTORY + "\n";
+        return menuText;
     }
+
 
     private static int getUserSelection() {
         String input = JOptionPane.showInputDialog("Please enter your selection:");
@@ -206,9 +205,46 @@ public class App {
 
         itemInventory--;
         showMessage("Inventory for " + itemName + " remaining: " + itemInventory);
+
+        // Update the inventory variable
+        updateInventory(itemName, itemInventory);
+
         return amountTendered;
     }
 
+    private static void updateInventory(String itemName, int itemInventory) {
+        switch (itemName) {
+            case ITEM_1_NAME:
+                ITEM_1_INVENTORY = itemInventory;
+                break;
+            case ITEM_2_NAME:
+                ITEM_2_INVENTORY = itemInventory;
+                break;
+            case ITEM_3_NAME:
+                ITEM_3_INVENTORY = itemInventory;
+                break;
+            case ITEM_4_NAME:
+                ITEM_4_INVENTORY = itemInventory;
+                break;
+            case ITEM_5_NAME:
+                ITEM_5_INVENTORY = itemInventory;
+                break;
+            case ITEM_6_NAME:
+                ITEM_6_INVENTORY = itemInventory;
+                break;
+            case ITEM_7_NAME:
+                ITEM_7_INVENTORY = itemInventory;
+                break;
+            case ITEM_8_NAME:
+                ITEM_8_INVENTORY = itemInventory;
+                break;
+            case ITEM_9_NAME:
+                ITEM_9_INVENTORY = itemInventory;
+                break;
+            default:
+                break;
+        }
+    }
     private static void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
