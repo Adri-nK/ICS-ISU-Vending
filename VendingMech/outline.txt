@@ -1,0 +1,78 @@
+ICS4U June 2023
+- Culminating Activity -
+________________________________________
+
+The final activity for the ICS4U course will be to design and implement a Vending Machine type program.  This project will be worth 10% of your final grade.  Your program will present at least nine items (snacks, drinks, trading cards, etc.). You will ask the user for their selection from a presented list.  The user will present an amount to be tendered and your program will have to decide whether or not it was enough to make the sale, calculate change and decrease inventory of the item.
+
+Using IntelliJ, your project must include the following:
+
+-	Descriptive comments both in the header (name, date, etc.  ) and some within your code describing interesting parts
+-	Use of variables - int and double
+-	Creation and use of a Scanner
+-	Proper structure and indentation
+-	Use of constants where necessary
+-	Items will output with attached inventory level which will decrease as sales are made
+-	Use of a decision structure (if/elseif/else) to help with choice and overall transaction
+-	Use of a loop (while) to keep user in the vending machine menu until an exit value is selected to quit the program
+
+Optional implementation:
+
+-	Use of NumberFormat for proper output of currency
+-	Use of ascii art to make output more creative
+-	Use of System.out.format to align output more strategically
+-	Restocking option for items
+
+ 
+Example setup:
+
+*************************************************************************************************************
+Treat Stop
+*************************************************************************************************************
+
+1.	Chips ($2.50) - 5	           2. Candy($1.50) - 5	                    3. Gum($1.00) -5
+
+… need 9 items
+
+				10. Exit
+
+*************************************************************************************************************
+Please enter your selection: 2
+
+Please enter amount tendered($): 5.00
+Thank you for your purchase!  Your change is $3.50.
+
+
+*************************************************************************************************************
+Treat Stop
+*************************************************************************************************************
+
+2.	Chips ($2.50) - 5	           2. Candy($1.50) - 4	                    3. Gum($1.00) -5
+
+… need 9 items
+
+				10. Exit
+
+*************************************************************************************************************
+Please enter your selection: 10
+
+Thank you.  See you next time!
+
+ 
+Submission:
+
+A compressed file (.zip) of your IntelliJ project folder.
+
+How to (PC):
+
+1.	Ensure the project works with proper comments.  Close project and IntelliJ.
+2.	Right-click on project folder and go to Send to > Compressed (zipped) folder
+3.	The file produced is the only file you attach to the dropbox
+
+How to (MAC):
+
+4.	Ensure the project works with proper comments.  Close project and IntelliJ.
+5.	Right-click on project folder and go to “compress the folder”
+6.	The file produced is the only file you attach to the dropbox
+
+
+Due date: June 16th @ 11:59PM on linked D2L dropbox.
