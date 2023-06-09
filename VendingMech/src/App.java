@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class App {
     private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
-
+    //setting items
     private static final String ITEM_1_NAME = "Chips";
     private static final double ITEM_1_PRICE = 2.50;
     private static int ITEM_1_INVENTORY = 1;
@@ -43,24 +43,23 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        displayMenu();
+        displayMenu(); // Calls the method to print the menu in the terminal
 
         int selection;
         do {
             System.out.print("Please enter your selection: ");
             selection = scanner.nextInt();
 
+            // Exit option
             if (selection == 10) {
                 System.out.println("Thank you. See you next time!");
                 break;
             }
 
             double amountTendered;
-            int itemInventory;
-            switch (selection) {
+            switch (selection) { // here we select the item to buy and update the inventory
                 case 1:
                     amountTendered = processItem(scanner, ITEM_1_NAME, ITEM_1_PRICE);
-                    itemInventory = ITEM_1_INVENTORY;
                     if (amountTendered > 0) {
                         ITEM_1_INVENTORY--;
                         System.out.println("Thank you for your purchase! Your change is $" +
@@ -69,17 +68,70 @@ public class App {
                     break;
                 case 2:
                     amountTendered = processItem(scanner, ITEM_2_NAME, ITEM_2_PRICE);
-                    itemInventory = ITEM_2_INVENTORY;
                     if (amountTendered > 0) {
                         ITEM_2_INVENTORY--;
                         System.out.println("Thank you for your purchase! Your change is $" +
                                 DECIMAL_FORMAT.format(amountTendered - ITEM_2_PRICE) + ".");
                     }
                     break;
-                // Rest of the cases...
+                case 3:
+                    amountTendered = processItem(scanner, ITEM_3_NAME, ITEM_3_PRICE);
+                    if (amountTendered > 0) {
+                        ITEM_3_INVENTORY--;
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                DECIMAL_FORMAT.format(amountTendered - ITEM_3_PRICE) + ".");
+                    }
+                    break;
+                case 4:
+                    amountTendered = processItem(scanner, ITEM_4_NAME, ITEM_4_PRICE);
+                    if (amountTendered > 0) {
+                        ITEM_4_INVENTORY--;
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                DECIMAL_FORMAT.format(amountTendered - ITEM_4_PRICE) + ".");
+                    }
+                    break;
+                case 5:
+                    amountTendered = processItem(scanner, ITEM_5_NAME, ITEM_5_PRICE);
+                    if (amountTendered > 0) {
+                        ITEM_5_INVENTORY--;
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                DECIMAL_FORMAT.format(amountTendered - ITEM_5_PRICE) + ".");
+                    }
+                    break;
+                case 6:
+                    amountTendered = processItem(scanner, ITEM_6_NAME, ITEM_6_PRICE);
+                    if (amountTendered > 0) {
+                        ITEM_6_INVENTORY--;
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                DECIMAL_FORMAT.format(amountTendered - ITEM_6_PRICE) + ".");
+                    }
+                    break;
+                case 7:
+                    amountTendered = processItem(scanner, ITEM_7_NAME, ITEM_7_PRICE);
+                    if (amountTendered > 0) {
+                        ITEM_7_INVENTORY--;
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                DECIMAL_FORMAT.format(amountTendered - ITEM_7_PRICE) + ".");
+                    }
+                    break;
+                case 8:
+                    amountTendered = processItem(scanner, ITEM_8_NAME, ITEM_8_PRICE);
+                    if (amountTendered > 0) {
+                        ITEM_8_INVENTORY--;
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                DECIMAL_FORMAT.format(amountTendered - ITEM_8_PRICE) + ".");
+                    }
+                    break;
+                case 9:
+                    amountTendered = processItem(scanner, ITEM_9_NAME, ITEM_9_PRICE);
+                    if (amountTendered > 0) {
+                        ITEM_9_INVENTORY--;
+                        System.out.println("Thank you for your purchase! Your change is $" +
+                                DECIMAL_FORMAT.format(amountTendered - ITEM_9_PRICE) + ".");
+                    }
+                    break;
                 default:
                     System.out.println("Invalid selection. Please try again.");
-                    itemInventory = 0;
                     break;
             }
 
@@ -87,10 +139,9 @@ public class App {
         } while (true);
     }
 
-    // Rest of the code...
-
-    private static double processItem(Scanner scanner, String itemName, double itemPrice) {
+        private static double processItem(Scanner scanner, String itemName, double itemPrice) {
         int itemInventory;
+        // here we update the inventory
         switch (itemName) {
             case ITEM_1_NAME:
                 itemInventory = ITEM_1_INVENTORY;
@@ -98,7 +149,27 @@ public class App {
             case ITEM_2_NAME:
                 itemInventory = ITEM_2_INVENTORY;
                 break;
-            // Rest of the cases...
+            case ITEM_3_NAME:
+                itemInventory = ITEM_3_INVENTORY;
+                break;
+            case ITEM_4_NAME:
+                itemInventory = ITEM_4_INVENTORY;
+                break;
+            case ITEM_5_NAME:
+                itemInventory = ITEM_5_INVENTORY;
+                break;
+            case ITEM_6_NAME:
+                itemInventory = ITEM_6_INVENTORY;
+                break;
+            case ITEM_7_NAME:
+                itemInventory = ITEM_7_INVENTORY;
+                break;
+            case ITEM_8_NAME:
+                itemInventory = ITEM_8_INVENTORY;
+                break;
+            case ITEM_9_NAME:
+                itemInventory = ITEM_9_INVENTORY;
+                break;
             default:
                 itemInventory = 0;
                 break;
@@ -120,7 +191,8 @@ public class App {
         return amountTendered;
     }
 
-    private static void displayMenu() {
+
+    private static void displayMenu() { //menu displayed when selecting item
         System.out.println("*************************************************************************************************************");
         System.out.println("Treat Stop");
         System.out.println("*************************************************************************************************************");
