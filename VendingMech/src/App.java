@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class App {
     private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
-    //setting items
+    //setting items aka declarations
     private static final String ITEM_1_NAME = "Chips";
     private static final double ITEM_1_PRICE = 2.50;
     private static int ITEM_1_INVENTORY = 1;
@@ -64,7 +64,7 @@ public class App {
             }
 
             double amountTendered;
-            switch (selection) { // here we select the item to buy and update the inventory
+            switch (selection) { // here we select the item to buy and update the inventory aka input choice
                 case 1:
                     amountTendered = processItem(scanner, ITEM_1_NAME, ITEM_1_PRICE);
                     if (amountTendered > 0) {
@@ -148,7 +148,7 @@ public class App {
 
         private static double processItem(Scanner scanner, String itemName, double itemPrice) {
         int itemInventory;
-        // here we update the inventory
+        // here we update the inventory aka more Calculations 
         switch (itemName) {
             case ITEM_1_NAME:
                 itemInventory = ITEM_1_INVENTORY;
@@ -199,7 +199,7 @@ public class App {
     }
 
 
-    private static void displayMenu() { //menu displayed when selecting item
+    private static void displayMenu() { //menu displayed when selecting item aka menu output
         System.out.println("*************************************************************************************************************");
         System.out.println("Treat Stop");
         System.out.println("*************************************************************************************************************");
