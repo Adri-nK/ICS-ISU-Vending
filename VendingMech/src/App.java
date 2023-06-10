@@ -1,3 +1,10 @@
+/*
+Vasco L. and Adrian K.
+    June 8, 2023
+    Final project
+    We will be creating a vending machine that will nine options of items and be able to buy these items and restock them
+*/
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
